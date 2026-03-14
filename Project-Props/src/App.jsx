@@ -127,9 +127,12 @@ const jobOpenings = [
 ];
   return (
     <div className="parent">
-     {jobOpenings.map(function(elem) {
-      return <Card brandLogo={elem.brandLogo} company={elem.company} datePosted={elem.datePosted}
+     {jobOpenings.map(function(elem, idx) {
+      return <div key={idx}>
+        <Card brandLogo={elem.brandLogo} company={elem.company} datePosted={elem.datePosted}
       post={elem.post} tag1 = {elem.tag1} tag2= {elem.tag2} pay={elem.pay} location= {elem.location}/>
+     
+      </div>
      })}
     </div>
   )
